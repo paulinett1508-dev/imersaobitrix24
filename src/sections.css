@@ -792,6 +792,18 @@
   gap: 1rem;
 }
 
+.footer-logo {
+  opacity: 0.55;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+  max-width: 160px;
+  height: auto;
+}
+
+.footer-logo:hover {
+  opacity: 0.8;
+}
+
 .footer-brand p {
   font-size: 0.875rem;
   color: var(--color-traevo-gray-2);
