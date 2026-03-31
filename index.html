@@ -35,7 +35,10 @@
     <!-- ─── Fonts ─── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap&font-display=swap" rel="stylesheet" />
+
+    <!-- ─── Performance: preload LCP (logo hero) ─── -->
+    <link rel="preload" as="image" href="/src/assets/images/logo/logo01.png" />
 
     <!-- ─── JSON-LD: Organization ─── -->
     <script type="application/ld+json">
@@ -113,6 +116,7 @@
               alt="Traevo"
               width="120"
               height="40"
+              fetchpriority="high"
             />
           </a>
           <a href="#inscricao" class="btn-primary btn-sm">Quero me inscrever</a>
