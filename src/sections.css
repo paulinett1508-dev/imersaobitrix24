@@ -149,7 +149,7 @@
   background-color: var(--color-traevo-dark);
   background-image: radial-gradient(
     circle at center,
-    color-mix(in srgb, var(--color-traevo-white) 7%, transparent) 1px,
+    color-mix(in srgb, var(--color-traevo-yellow) 12%, transparent) 1px,
     transparent 1px
   );
   background-size: 28px 28px;
@@ -180,6 +180,11 @@
   padding-bottom: 3rem;
   overflow: hidden;
   background-color: var(--color-traevo-black);
+  /* Grid lines — sensação de dashboard de vendas */
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-traevo-white) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-traevo-white) 3%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 
 @media (min-width: 768px) {
@@ -191,15 +196,16 @@
 
 .hero-glow {
   position: absolute;
-  top: -150px;
+  top: -200px;
   left: 50%;
   transform: translateX(-50%);
-  width: 900px;
-  height: 700px;
+  width: 1400px;
+  height: 1000px;
   background: radial-gradient(
     ellipse at center,
-    color-mix(in srgb, var(--color-traevo-yellow) 12%, transparent) 0%,
-    color-mix(in srgb, var(--color-traevo-yellow) 4%, transparent) 40%,
+    color-mix(in srgb, var(--color-traevo-yellow) 28%, transparent) 0%,
+    color-mix(in srgb, var(--color-traevo-yellow) 12%, transparent) 30%,
+    color-mix(in srgb, var(--color-traevo-yellow) 3%, transparent) 55%,
     transparent 70%
   );
   pointer-events: none;
@@ -470,6 +476,7 @@
 
 .text-accent {
   color: var(--color-traevo-yellow);
+  text-shadow: 0 0 40px color-mix(in srgb, var(--color-traevo-yellow) 50%, transparent);
 }
 
 .hero-subtitle {
@@ -670,7 +677,11 @@
 }
 
 .pain-card {
-  background-color: var(--color-traevo-dark-2);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--color-traevo-yellow) 4%, var(--color-traevo-dark-2)) 0%,
+    var(--color-traevo-dark-2) 60%
+  );
   border: 1px solid var(--color-traevo-dark-3);
   border-left: 3px solid var(--color-traevo-dark-3);
   border-radius: var(--radius-card);
@@ -947,7 +958,11 @@
 }
 
 .theme-card {
-  background-color: var(--color-traevo-dark-2);
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--color-traevo-yellow) 5%, var(--color-traevo-dark-2)) 0%,
+    var(--color-traevo-dark-2) 55%
+  );
   border: 1px solid var(--color-traevo-dark-3);
   border-top: 2px solid var(--color-traevo-dark-3);
   border-radius: var(--radius-card);
@@ -1151,7 +1166,11 @@
 }
 
 .testimonial-card {
-  background-color: var(--color-traevo-dark-2);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-traevo-yellow) 5%, var(--color-traevo-dark-2)) 0%,
+    var(--color-traevo-dark-2) 60%
+  );
   border: 1px solid var(--color-traevo-dark-3);
   border-radius: var(--radius-card);
   padding: 1.75rem;

@@ -7,13 +7,13 @@
 @theme {
   /* Cores primitivas */
   --color-traevo-yellow:   #e0e426;
-  --color-traevo-black:    #0a0a0a;
-  --color-traevo-dark:     #141414;
-  --color-traevo-dark-2:   #1e1e1e;
-  --color-traevo-dark-3:   #2a2a2a;
-  --color-traevo-gray:     #6b6b6b;
-  --color-traevo-gray-2:   #9a9a9a;
-  --color-traevo-light:    #f0f0f0;
+  --color-traevo-black:    #060b18;
+  --color-traevo-dark:     #0d1525;
+  --color-traevo-dark-2:   #141e30;
+  --color-traevo-dark-3:   #1e2c43;
+  --color-traevo-gray:     #6b7a96;
+  --color-traevo-gray-2:   #9aaac4;
+  --color-traevo-light:    #e8eef8;
   --color-traevo-white:    #ffffff;
 
   /* Cores semânticas */
@@ -106,13 +106,19 @@ button {
   font-size: 1rem;
   padding: 0.875rem 2rem;
   border-radius: var(--radius-btn);
-  transition: filter 0.2s ease, transform 0.2s ease;
+  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
+  box-shadow:
+    0 4px 20px color-mix(in srgb, var(--color-traevo-yellow) 35%, transparent),
+    0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary:hover {
   filter: brightness(1.1);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px color-mix(in srgb, var(--color-traevo-yellow) 55%, transparent),
+    0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary:active {
@@ -161,9 +167,10 @@ button {
 }
 
 .badge--yellow {
-  background-color: color-mix(in srgb, var(--color-traevo-yellow) 15%, transparent);
-  border-color: color-mix(in srgb, var(--color-traevo-yellow) 40%, transparent);
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 18%, transparent);
+  border-color: color-mix(in srgb, var(--color-traevo-yellow) 60%, transparent);
   color: var(--color-traevo-yellow);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--color-traevo-yellow) 20%, transparent);
 }
 
 /* Card */
