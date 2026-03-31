@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://imersaobitrix24.traevo.com.br/" />
     <meta property="og:title" content="Imersão Bitrix24 — Ao Vivo toda Quarta às 11h | Gratuito" />
     <meta property="og:description" content="Aprenda a usar o Bitrix24 para vender mais e organizar sua equipe. Toda quarta-feira às 11h, ao vivo e gratuito." />
-    <meta property="og:image" content="/src/assets/images/og/og-image.jpg" />
+    <meta property="og:image" content="https://imersaobitrix24.traevo.com.br/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="pt_BR" />
@@ -27,9 +27,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Imersão Bitrix24 — Ao Vivo toda Quarta às 11h | Gratuito" />
     <meta name="twitter:description" content="Aprenda a usar o Bitrix24 para vender mais e organizar sua equipe. Toda quarta-feira às 11h, ao vivo e gratuito." />
-    <meta name="twitter:image" content="/src/assets/images/og/og-image.jpg" />
+    <meta name="twitter:image" content="https://imersaobitrix24.traevo.com.br/og-image.jpg" />
 
-    <!-- ─── Favicon (placeholder) ─── -->
+    <!-- ─── Favicon ─── -->
     <link rel="icon" type="image/png" href="/src/assets/images/logo/logo01.png" />
 
     <!-- ─── Fonts ─── -->
@@ -44,8 +44,7 @@
       "@type": "Organization",
       "name": "Traevo",
       "url": "https://traevo.com.br",
-      "logo": "https://imersaobitrix24.traevo.com.br/src/assets/images/logo/logo01.png",
-      "sameAs": []
+      "logo": "https://imersaobitrix24.traevo.com.br/src/assets/images/logo/logo01.png"
     }
     </script>
 
@@ -56,11 +55,7 @@
       "@type": "Event",
       "name": "Imersão Bitrix24",
       "description": "Evento semanal ao vivo sobre Bitrix24. Aprenda CRM, automação de vendas e gestão de equipe. Gratuito.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Traevo",
-        "url": "https://traevo.com.br"
-      },
+      "organizer": { "@type": "Organization", "name": "Traevo", "url": "https://traevo.com.br" },
       "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "isAccessibleForFree": true,
@@ -69,27 +64,737 @@
     }
     </script>
 
-    <!-- ─── JSON-LD: FAQPage (populado via Wave 4) ─── -->
+    <!-- ─── JSON-LD: FAQPage ─── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A Imersão Bitrix24 é realmente gratuita?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, 100% gratuita. Sem taxa de inscrição, sem cartão de crédito." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando acontece a Imersão?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Toda quarta-feira às 11h, ao vivo. Cada sessão aborda um tema diferente do Bitrix24." }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso ter o Bitrix24 instalado?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Recomendamos que sim, mas você pode assistir primeiro para decidir se o Bitrix24 é a ferramenta certa para você." }
+        },
+        {
+          "@type": "Question",
+          "name": "As aulas ficam gravadas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, os inscritos recebem acesso à gravação da sessão após o evento ao vivo." }
+        },
+        {
+          "@type": "Question",
+          "name": "Para quem é a Imersão?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Para gestores, vendedores, analistas e qualquer profissional que queira usar o Bitrix24 com mais eficiência para vender mais e organizar a equipe." }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
 
-    <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-         SEÇÕES — inseridas na Wave 2
-    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+    <!-- ════════════════════════════════════════
+         HEADER FIXO
+    ════════════════════════════════════════ -->
+    <header class="site-header" id="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="#" class="header-logo" aria-label="Traevo — página inicial">
+            <img
+              src="/src/assets/images/logo/logo01.png"
+              alt="Traevo"
+              width="120"
+              height="40"
+            />
+          </a>
+          <a href="#inscricao" class="btn-primary btn-sm">Quero me inscrever</a>
+        </div>
+      </div>
+    </header>
 
-    <div id="app">
-      <!-- 1. Hero -->
-      <!-- 2. Problema/Dor -->
-      <!-- 3. Solução -->
-      <!-- 4. Temas -->
-      <!-- 5. Autoridade -->
-      <!-- 6. Prova Social -->
-      <!-- 7. FAQ -->
-      <!-- 8. CTA Final + Rodapé -->
+    <!-- ════════════════════════════════════════
+         1. HERO
+    ════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Badge ao vivo -->
+          <div class="fade-up">
+            <span class="badge badge--yellow">
+              <span class="live-dot" aria-hidden="true"></span>
+              Toda quarta às 11h &nbsp;·&nbsp; Ao vivo &amp; Gratuito
+            </span>
+          </div>
+
+          <!-- Título -->
+          <h1 class="hero-title fade-up">
+            Domine o&nbsp;<span class="text-accent">Bitrix24</span><br />
+            e transforme sua equipe<br />
+            numa máquina de vendas
+          </h1>
+
+          <!-- Subtítulo -->
+          <p class="hero-subtitle fade-up">
+            Imersão semanal ao vivo onde você aprende, na prática, a usar o Bitrix24
+            para fechar mais negócios, organizar processos e escalar resultados —
+            sem enrolação e sem pagar nada.
+          </p>
+
+          <!-- Contador regressivo -->
+          <div class="countdown-wrapper fade-up" aria-label="Contagem regressiva para a próxima sessão">
+            <p class="countdown-label">Próxima sessão começa em:</p>
+            <div class="countdown" id="countdown">
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-days">00</span>
+                <span class="countdown-text">dias</span>
+              </div>
+              <span class="countdown-sep" aria-hidden="true">:</span>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-hours">00</span>
+                <span class="countdown-text">horas</span>
+              </div>
+              <span class="countdown-sep" aria-hidden="true">:</span>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-minutes">00</span>
+                <span class="countdown-text">min</span>
+              </div>
+              <span class="countdown-sep" aria-hidden="true">:</span>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-seconds">00</span>
+                <span class="countdown-text">seg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário Hero -->
+          <form class="hero-form fade-up" id="form-hero" novalidate data-form="hero">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="hero-name">Nome</label>
+                <input
+                  type="text"
+                  id="hero-name"
+                  name="name"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  required
+                />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="hero-email">E-mail</label>
+                <input
+                  type="email"
+                  id="hero-email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  required
+                />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="hero-phone">WhatsApp</label>
+                <input
+                  type="tel"
+                  id="hero-phone"
+                  name="phone"
+                  placeholder="(11) 99999-9999"
+                  autocomplete="tel"
+                />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span class="btn-text">Garantir minha vaga gratuita →</span>
+              <span class="btn-loading" hidden>Enviando…</span>
+            </button>
+            <p class="form-disclaimer">
+              Sem spam. Seus dados estão seguros. Cancele quando quiser.
+            </p>
+            <div class="form-feedback" role="alert" aria-live="polite" hidden></div>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- Decoração de fundo -->
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         2. PROBLEMA / DOR
+    ════════════════════════════════════════ -->
+    <section class="section section--alt" id="problema">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <span class="section-label">O problema</span>
+          <h2 class="section-title">
+            Você tem o Bitrix24,<br />mas sente que está perdendo tempo?
+          </h2>
+          <div class="divider-accent"></div>
+          <p class="section-subtitle">
+            Você não está sozinho. Esses são os problemas mais comuns de quem
+            tenta usar o Bitrix24 sem orientação:
+          </p>
+        </div>
+
+        <div class="pain-grid">
+          <div class="pain-card fade-up">
+            <div class="pain-icon" aria-hidden="true">😩</div>
+            <h3>Funil de vendas desorganizado</h3>
+            <p>Leads esquecidos, etapas sem critério e nenhuma visibilidade real do pipeline.</p>
+          </div>
+          <div class="pain-card fade-up">
+            <div class="pain-icon" aria-hidden="true">🤯</div>
+            <h3>Plataforma complexa demais</h3>
+            <p>Tantos recursos que você não sabe por onde começar e acaba usando só 10% do potencial.</p>
+          </div>
+          <div class="pain-card fade-up">
+            <div class="pain-icon" aria-hidden="true">⏰</div>
+            <h3>Processos manuais e lentos</h3>
+            <p>Tarefas repetitivas que consomem horas do time e poderiam ser automatizadas em minutos.</p>
+          </div>
+          <div class="pain-card fade-up">
+            <div class="pain-icon" aria-hidden="true">📉</div>
+            <h3>Relatórios que não dizem nada</h3>
+            <p>Dados espalhados, sem padrão, que não ajudam a tomar decisão nenhuma.</p>
+          </div>
+          <div class="pain-card fade-up">
+            <div class="pain-icon" aria-hidden="true">👥</div>
+            <h3>Equipe sem alinhamento</h3>
+            <p>Cada vendedor faz do seu jeito, sem padronização e com histórico de atendimento perdido.</p>
+          </div>
+          <div class="pain-card fade-up">
+            <div class="pain-icon" aria-hidden="true">💸</div>
+            <h3>Investimento que não retorna</h3>
+            <p>Pagando pela ferramenta todo mês sem ver resultado concreto nas vendas ou na produtividade.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         3. SOLUÇÃO
+    ════════════════════════════════════════ -->
+    <section class="section" id="solucao">
+      <div class="container">
+
+        <div class="solution-inner">
+          <div class="solution-content fade-up">
+            <span class="section-label">A solução</span>
+            <h2 class="section-title">
+              A Imersão Bitrix24:<br />
+              aprenda na prática, toda semana
+            </h2>
+            <div class="divider-accent"></div>
+            <p class="section-subtitle">
+              Uma sessão ao vivo por semana, de 1 hora, com foco em um tema específico.
+              Você vê a tela, faz junto, tira dúvidas na hora e sai com algo
+              implementado no seu Bitrix24.
+            </p>
+
+            <ul class="solution-list">
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Ao vivo &amp; interativo</strong>
+                  <p>Faça perguntas em tempo real e receba respostas para o seu caso.</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong>1 tema por semana, do básico ao avançado</strong>
+                  <p>Cada sessão resolve um problema real. Nada teórico, tudo aplicável.</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Gravação disponível para inscritos</strong>
+                  <p>Perdeu ao vivo? Assista quando quiser, no seu ritmo.</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Totalmente gratuito</strong>
+                  <p>Sem cobranças, sem pegadinhas. Só valor.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#inscricao" class="btn-primary">Quero participar gratuitamente</a>
+          </div>
+
+          <div class="solution-visual fade-up" aria-hidden="true">
+            <div class="solution-badge-stack">
+              <div class="big-badge">
+                <span class="big-badge-number">10</span>
+                <span class="big-badge-text">temas<br />práticos</span>
+              </div>
+              <div class="big-badge big-badge--outline">
+                <span class="big-badge-number">1h</span>
+                <span class="big-badge-text">por<br />sessão</span>
+              </div>
+              <div class="big-badge">
+                <span class="big-badge-number">100%</span>
+                <span class="big-badge-text">ao vivo<br />&amp; grátis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         4. TEMAS
+    ════════════════════════════════════════ -->
+    <section class="section section--alt" id="temas">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <span class="section-label">Conteúdo</span>
+          <h2 class="section-title">10 temas que vão transformar<br />seu uso do Bitrix24</h2>
+          <div class="divider-accent"></div>
+          <p class="section-subtitle">
+            Cada sessão é uma oportunidade de resolver um problema real do seu negócio.
+          </p>
+        </div>
+
+        <div class="themes-grid">
+          <div class="theme-card fade-up">
+            <span class="theme-number">01</span>
+            <h3 class="theme-title">Configuração inicial do CRM</h3>
+            <p class="theme-desc">Estruture seu CRM do zero: campos, estágios e permissões alinhados com seu processo de vendas.</p>
+            <span class="theme-tag">Fundação</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">02</span>
+            <h3 class="theme-title">Pipeline de vendas que converte</h3>
+            <p class="theme-desc">Crie um funil eficiente, defina critérios de avanço e elimine leads mortos do seu pipeline.</p>
+            <span class="theme-tag">Vendas</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">03</span>
+            <h3 class="theme-title">Automações que economizam tempo</h3>
+            <p class="theme-desc">Configure robôs e gatilhos para tarefas repetitivas — notificações, follow-ups e muito mais.</p>
+            <span class="theme-tag">Automação</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">04</span>
+            <h3 class="theme-title">Gestão de tarefas e projetos</h3>
+            <p class="theme-desc">Organize sua equipe com projetos, sprints e Kanban para que nada caia no esquecimento.</p>
+            <span class="theme-tag">Produtividade</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">05</span>
+            <h3 class="theme-title">Relatórios e indicadores de vendas</h3>
+            <p class="theme-desc">Construa dashboards que mostram o que importa: conversão, ciclo de venda e receita prevista.</p>
+            <span class="theme-tag">Dados</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">06</span>
+            <h3 class="theme-title">Integração com WhatsApp</h3>
+            <p class="theme-desc">Conecte o WhatsApp ao Bitrix24 e gerencie todas as conversas sem sair do CRM.</p>
+            <span class="theme-tag">Canais</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">07</span>
+            <h3 class="theme-title">Marketing e captura de leads</h3>
+            <p class="theme-desc">Crie formulários, landing pages e campanhas de e-mail diretamente no Bitrix24.</p>
+            <span class="theme-tag">Marketing</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">08</span>
+            <h3 class="theme-title">Onboarding e gestão de equipe</h3>
+            <p class="theme-desc">Estruture o processo de entrada de novos colaboradores e gerencie metas com clareza.</p>
+            <span class="theme-tag">Equipe</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">09</span>
+            <h3 class="theme-title">Proposta comercial e contratos</h3>
+            <p class="theme-desc">Gere propostas profissionais, envie e acompanhe a aprovação tudo dentro do Bitrix24.</p>
+            <span class="theme-tag">Comercial</span>
+          </div>
+          <div class="theme-card fade-up">
+            <span class="theme-number">10</span>
+            <h3 class="theme-title">Escalando com Bitrix24</h3>
+            <p class="theme-desc">Boas práticas para crescer sem perder o controle: integrações, APIs e expansão do uso.</p>
+            <span class="theme-tag">Avançado</span>
+          </div>
+        </div>
+
+        <div class="themes-cta fade-up">
+          <a href="#inscricao" class="btn-primary">Quero aprender todos os temas</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         5. AUTORIDADE
+    ════════════════════════════════════════ -->
+    <section class="section" id="autoridade">
+      <div class="container">
+
+        <div class="authority-inner">
+          <div class="authority-photo fade-up">
+            <div class="photo-placeholder" aria-label="Foto da apresentadora (placeholder)">
+              <span aria-hidden="true">📸</span>
+              <small>Foto da apresentadora</small>
+            </div>
+          </div>
+
+          <div class="authority-content fade-up">
+            <span class="section-label">Quem vai apresentar</span>
+            <h2 class="section-title">Conheça a especialista<br />por trás da Imersão</h2>
+            <div class="divider-accent"></div>
+
+            <p class="authority-name">[Nome da Apresentadora]</p>
+            <p class="authority-role">Especialista em Bitrix24 &amp; Estrategista de Vendas · Traevo</p>
+
+            <p class="section-subtitle">
+              [Bio da apresentadora — sua experiência, quantas empresas já ajudou,
+              especialidade em Bitrix24 e paixão por ensinar de forma prática.]
+            </p>
+
+            <ul class="authority-stats">
+              <li>
+                <strong>+000</strong>
+                <span>empresas atendidas</span>
+              </li>
+              <li>
+                <strong>+0 anos</strong>
+                <span>com Bitrix24</span>
+              </li>
+              <li>
+                <strong>+000</strong>
+                <span>profissionais treinados</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         6. PROVA SOCIAL
+    ════════════════════════════════════════ -->
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <span class="section-label">Depoimentos</span>
+          <h2 class="section-title">O que dizem quem já participou</h2>
+          <div class="divider-accent"></div>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-up">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>
+              "Depois da Imersão, consegui montar um funil de vendas em 2 dias.
+              Antes levava semanas tentando sozinho. O conteúdo é objetivo e vai direto ao ponto."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">JM</div>
+              <div>
+                <strong>[Nome do Depoimento 1]</strong>
+                <span>[Cargo] · [Empresa]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-up">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>
+              "Finalmente entendi como usar as automações. Economizamos 3 horas
+              por dia de trabalho manual da equipe comercial. Valor absurdo para um evento gratuito."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AC</div>
+              <div>
+                <strong>[Nome do Depoimento 2]</strong>
+                <span>[Cargo] · [Empresa]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-up">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>
+              "Eu tinha medo de mexer no CRM por não entender nada. Depois da primeira sessão,
+              já saí com o pipeline configurado. A didática é incrível."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">RS</div>
+              <div>
+                <strong>[Nome do Depoimento 3]</strong>
+                <span>[Cargo] · [Empresa]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         7. FAQ
+    ════════════════════════════════════════ -->
+    <section class="section" id="faq">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <span class="section-label">Dúvidas frequentes</span>
+          <h2 class="section-title">Perguntas frequentes</h2>
+          <div class="divider-accent"></div>
+        </div>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item fade-up" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>A Imersão Bitrix24 é realmente gratuita?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>Sim, 100% gratuita. Sem taxa de inscrição, sem cartão de crédito, sem pegadinhas. Você só precisa se inscrever e aparecer na quarta-feira às 11h.</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>Quando acontece a Imersão?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>Toda quarta-feira às 11h (horário de Brasília), ao vivo. Cada sessão tem em torno de 1 hora e foca em um tema específico do Bitrix24.</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>Preciso ter o Bitrix24 instalado?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Recomendamos que sim para aproveitar ao máximo e aplicar ao vivo. Mas você pode assistir primeiro para avaliar se o Bitrix24 é a ferramenta certa para o seu negócio.</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>As aulas ficam gravadas?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>Sim! Os inscritos recebem o link da gravação após o evento ao vivo. Assista quando e quantas vezes quiser.</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>Para quem é a Imersão?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>Para gestores, vendedores, analistas e qualquer profissional que use ou queira usar o Bitrix24. Do iniciante ao usuário intermediário que quer ir mais longe.</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-up" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+              <span>Posso fazer perguntas durante a sessão?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-6" hidden>
+              <p>Sim! O evento é ao vivo justamente para isso. Você pode perguntar no chat e a apresentadora responde em tempo real.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         8. CTA FINAL + RODAPÉ
+    ════════════════════════════════════════ -->
+    <section class="section cta-final" id="inscricao">
+      <div class="container">
+
+        <div class="cta-inner fade-up">
+          <span class="section-label">Inscrição gratuita</span>
+          <h2 class="section-title">
+            Garanta sua vaga na<br />
+            próxima Imersão Bitrix24
+          </h2>
+          <p class="section-subtitle">
+            Toda quarta-feira às 11h. Ao vivo. Gratuito. Sem enrolação.
+            Inscreva-se agora e receba o link de acesso no seu e-mail.
+          </p>
+
+          <!-- Formulário CTA Final -->
+          <form class="cta-form" id="form-cta" novalidate data-form="cta">
+            <div class="form-row form-row--stack">
+              <div class="form-field">
+                <label for="cta-name">Nome</label>
+                <input
+                  type="text"
+                  id="cta-name"
+                  name="name"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  required
+                />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="cta-email">E-mail</label>
+                <input
+                  type="email"
+                  id="cta-email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  required
+                />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="cta-phone">WhatsApp</label>
+                <input
+                  type="tel"
+                  id="cta-phone"
+                  name="phone"
+                  placeholder="(11) 99999-9999"
+                  autocomplete="tel"
+                />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn-primary btn-full">
+                <span class="btn-text">Garantir minha vaga gratuita →</span>
+                <span class="btn-loading" hidden>Enviando…</span>
+              </button>
+            </div>
+            <p class="form-disclaimer">
+              Sem spam. Seus dados estão seguros. Cancele quando quiser.
+            </p>
+            <div class="form-feedback" role="alert" aria-live="polite" hidden></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ RODAPÉ ═══════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+
+          <div class="footer-brand">
+            <img
+              src="/src/assets/images/logo/logo01.png"
+              alt="Traevo"
+              width="100"
+              height="34"
+              loading="lazy"
+            />
+            <p>Especialistas em Bitrix24.<br />Transformamos processos em resultados.</p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Navegação</h3>
+            <nav aria-label="Links do rodapé">
+              <ul>
+                <li><a href="#problema">O problema</a></li>
+                <li><a href="#solucao">A solução</a></li>
+                <li><a href="#temas">Temas</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#inscricao">Inscrição</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contato Traevo</h3>
+            <ul>
+              <li>
+                <a href="https://traevo.com.br" target="_blank" rel="noopener noreferrer">traevo.com.br</a>
+              </li>
+              <li>
+                <a href="mailto:contato@traevo.com.br">contato@traevo.com.br</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="footer-year">2025</span> Traevo. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════
+         EXIT POPUP
+    ════════════════════════════════════════ -->
+    <div
+      class="popup-overlay"
+      id="exit-popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popup-title"
+      aria-hidden="true"
+      hidden
+    >
+      <div class="popup-box">
+        <button class="popup-close" id="popup-close" aria-label="Fechar">✕</button>
+        <span class="section-label">Espera!</span>
+        <h2 class="popup-title" id="popup-title">
+          Não vai embora sem garantir sua vaga…
+        </h2>
+        <p class="popup-subtitle">
+          A próxima Imersão Bitrix24 começa em breve. Inscreva-se em menos de 1 minuto.
+        </p>
+        <form class="popup-form" id="form-popup" novalidate data-form="popup">
+          <div class="form-field">
+            <label for="popup-email">Seu melhor e-mail</label>
+            <input
+              type="email"
+              id="popup-email"
+              name="email"
+              placeholder="seu@email.com"
+              autocomplete="email"
+              required
+            />
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn-primary btn-full">
+            <span class="btn-text">Quero minha vaga gratuita →</span>
+            <span class="btn-loading" hidden>Enviando…</span>
+          </button>
+          <div class="form-feedback" role="alert" aria-live="polite" hidden></div>
+        </form>
+        <button class="popup-dismiss" id="popup-dismiss">Não, prefiro continuar sem aprender</button>
+      </div>
     </div>
-
-    <!-- ─── Exit Popup ─── -->
-    <div id="exit-popup" aria-hidden="true"></div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
