@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: space-between;
   padding-block: 1rem;
+  position: relative;
 }
 
 .header-logo img {
@@ -25,9 +26,110 @@
   width: auto;
 }
 
-.btn-sm {
-  padding: 0.625rem 1.25rem;
-  font-size: 0.875rem;
+/* ── Hamburger button ── */
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-traevo-gray-2);
+  border-radius: 0.375rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hamburger-btn:hover {
+  color: var(--color-traevo-white);
+  background-color: var(--color-traevo-dark-2);
+}
+
+/* ── Nav menu — mobile (dropdown) ── */
+.header-nav {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  right: 0;
+  background-color: var(--color-traevo-dark);
+  border-bottom: 1px solid var(--color-traevo-dark-3);
+  z-index: 99;
+  animation: nav-slide-down 0.2s ease;
+}
+
+@keyframes nav-slide-down {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0 0.75rem;
+}
+
+.header-nav li a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-traevo-gray-2);
+  transition: color 0.15s ease;
+}
+
+.header-nav li a:hover {
+  color: var(--color-traevo-white);
+}
+
+.header-nav li a.nav-cta {
+  color: var(--color-traevo-yellow);
+  font-weight: 600;
+}
+
+.header-nav li a.nav-cta:hover {
+  color: var(--color-traevo-white);
+}
+
+/* ── Desktop: nav inline ── */
+@media (min-width: 768px) {
+  .header-nav {
+    position: static;
+    background: none;
+    border: none;
+    animation: none;
+  }
+
+  .header-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0;
+  }
+
+  .header-nav li a {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+  }
+
+  .header-nav li a:hover {
+    background-color: var(--color-traevo-dark-2);
+  }
+
+  .header-nav li a.nav-cta {
+    border: 1px solid color-mix(in srgb, var(--color-traevo-yellow) 40%, transparent);
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.875rem;
+  }
+
+  .header-nav li a.nav-cta:hover {
+    background-color: color-mix(in srgb, var(--color-traevo-yellow) 10%, transparent);
+    color: var(--color-traevo-yellow);
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
 }
 
 /* ─────────────────────────────────────────
@@ -310,8 +412,16 @@
 }
 
 .pain-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 10%, transparent);
+  border-radius: 0.625rem;
+  color: var(--color-traevo-yellow);
+  margin-bottom: 0.875rem;
+  flex-shrink: 0;
 }
 
 .pain-card h3 {
@@ -627,8 +737,9 @@
 
 .stars {
   color: var(--color-traevo-yellow);
-  font-size: 1rem;
-  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
 }
 
 .testimonial-card blockquote {
@@ -790,6 +901,18 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.footer-logo {
+  opacity: 0.55;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+  max-width: 160px;
+  height: auto;
+}
+
+.footer-logo:hover {
+  opacity: 0.8;
 }
 
 .footer-brand p {

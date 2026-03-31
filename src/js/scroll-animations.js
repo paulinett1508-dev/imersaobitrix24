@@ -63,6 +63,55 @@ function initHeaderScroll() {
   window.addEventListener('scroll', onScroll, { passive: true })
 }
 
+// Hamburger menu
+function initHamburger() {
+  const btn  = document.getElementById('hamburger-btn')
+  const nav  = document.getElementById('header-nav')
+  if (!btn || !nav) return
+
+  const iconMenu  = btn.querySelector('.icon-menu')
+  const iconClose = btn.querySelector('.icon-close')
+
+  function openMenu() {
+    nav.hidden = false
+    btn.setAttribute('aria-expanded', 'true')
+    btn.setAttribute('aria-label', 'Fechar menu')
+    iconMenu.hidden  = true
+    iconClose.hidden = false
+  }
+
+  function closeMenu() {
+    nav.hidden = true
+    btn.setAttribute('aria-expanded', 'false')
+    btn.setAttribute('aria-label', 'Abrir menu')
+    iconMenu.hidden  = false
+    iconClose.hidden = true
+  }
+
+  btn.addEventListener('click', () => {
+    nav.hidden ? openMenu() : closeMenu()
+  })
+
+  // Fecha ao clicar num link do menu
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu)
+  })
+
+  // Fecha ao redimensionar para desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      nav.hidden = false
+      iconMenu.hidden  = false
+      iconClose.hidden = true
+      btn.setAttribute('aria-expanded', 'false')
+    }
+  }, { passive: true })
+
+  // Estado inicial: desktop = nav visível, mobile = nav oculto
+  if (window.innerWidth >= 768) nav.hidden = false
+}
+
 initScrollAnimations()
 initFAQ()
 initHeaderScroll()
+initHamburger()
