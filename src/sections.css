@@ -310,8 +310,16 @@
 }
 
 .pain-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 10%, transparent);
+  border-radius: 0.625rem;
+  color: var(--color-traevo-yellow);
+  margin-bottom: 0.875rem;
+  flex-shrink: 0;
 }
 
 .pain-card h3 {
@@ -627,8 +635,9 @@
 
 .stars {
   color: var(--color-traevo-yellow);
-  font-size: 1rem;
-  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
 }
 
 .testimonial-card blockquote {
