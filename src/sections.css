@@ -1205,22 +1205,22 @@
   justify-content: center;
 }
 
-.photo-placeholder {
-  width: 280px;
-  height: 320px;
-  background-color: var(--color-traevo-dark-2);
-  border: 2px dashed var(--color-traevo-dark-3);
-  border-radius: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  color: var(--color-traevo-gray);
+.authority-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid color-mix(in srgb, var(--color-traevo-yellow) 40%, transparent);
+  box-shadow:
+    0 0 0 6px color-mix(in srgb, var(--color-traevo-yellow) 10%, transparent),
+    0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
-.photo-placeholder span {
-  font-size: 3rem;
+@media (min-width: 1024px) {
+  .authority-img {
+    width: 340px;
+    height: 340px;
+  }
 }
 
 .authority-content {
