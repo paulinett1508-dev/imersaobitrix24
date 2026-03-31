@@ -147,6 +147,12 @@
 
 .section--alt {
   background-color: var(--color-traevo-dark);
+  background-image: radial-gradient(
+    circle at center,
+    color-mix(in srgb, var(--color-traevo-white) 7%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
 }
 
 .section-header {
@@ -209,6 +215,250 @@
   gap: 2rem;
   max-width: 800px;
   margin-inline: auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Desktop: 2-column hero with illustration */
+@media (min-width: 1024px) {
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+    max-width: none;
+    gap: 4rem;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-form {
+    max-width: 100%;
+  }
+}
+
+/* Hero media column */
+.hero-media {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+/* ── CRM Dashboard Mockup ── */
+.hero-illustration {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+/* Floating stat badges */
+.hero-stat {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-traevo-dark-2);
+  border: 1px solid var(--color-traevo-dark-3);
+  border-radius: 9999px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-traevo-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.hero-stat svg {
+  color: var(--color-traevo-yellow);
+  flex-shrink: 0;
+}
+
+.hero-stat--1 {
+  top: -1rem;
+  left: -0.5rem;
+  animation: float-badge-1 3s ease-in-out infinite;
+}
+
+.hero-stat--2 {
+  bottom: 3.5rem;
+  right: -0.5rem;
+  animation: float-badge-2 3.5s ease-in-out infinite;
+}
+
+@keyframes float-badge-1 {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes float-badge-2 {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-stat--1,
+  .hero-stat--2 { animation: none; }
+}
+
+/* CRM Card main container */
+.crm-card {
+  background: linear-gradient(
+    150deg,
+    color-mix(in srgb, var(--color-traevo-yellow) 6%, var(--color-traevo-dark-2)) 0%,
+    var(--color-traevo-dark-2) 60%
+  );
+  border: 1px solid color-mix(in srgb, var(--color-traevo-yellow) 28%, transparent);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 24px 56px rgba(0, 0, 0, 0.55),
+    0 0 0 1px color-mix(in srgb, var(--color-traevo-yellow) 8%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--color-traevo-white) 5%, transparent);
+}
+
+.crm-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 7%, var(--color-traevo-dark-2));
+  border-bottom: 1px solid var(--color-traevo-dark-3);
+}
+
+.crm-card-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-traevo-white);
+  letter-spacing: 0.01em;
+}
+
+.crm-card-dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.crm-card-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.crm-card-dots span:nth-child(1) { background-color: #ef4444; }
+.crm-card-dots span:nth-child(2) { background-color: #f59e0b; }
+.crm-card-dots span:nth-child(3) { background-color: #22c55e; }
+
+.crm-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 0.875rem;
+}
+
+.crm-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.crm-col-label {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-traevo-gray-2);
+  background-color: var(--color-traevo-dark-3);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.375rem;
+  text-align: center;
+  margin-bottom: 0.125rem;
+}
+
+.crm-deal {
+  background-color: var(--color-traevo-dark);
+  border: 1px solid var(--color-traevo-dark-3);
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  transition: border-color 0.2s ease;
+}
+
+.crm-deal--yellow {
+  border-color: color-mix(in srgb, var(--color-traevo-yellow) 40%, transparent);
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 6%, var(--color-traevo-dark));
+}
+
+.crm-deal--green {
+  border-color: color-mix(in srgb, #22c55e 40%, transparent);
+  background-color: color-mix(in srgb, #22c55e 6%, var(--color-traevo-dark));
+}
+
+.crm-deal-name {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  color: var(--color-traevo-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.crm-deal-value {
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: var(--color-traevo-yellow);
+}
+
+/* Mini chart */
+.crm-chart {
+  border-top: 1px solid var(--color-traevo-dark-3);
+  padding: 0.75rem 0.875rem;
+}
+
+.crm-chart-label {
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-traevo-gray-2);
+  margin-bottom: 0.5rem;
+}
+
+.crm-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+  height: 36px;
+}
+
+.crm-bar {
+  flex: 1;
+  background-color: var(--color-traevo-dark-3);
+  border-radius: 2px 2px 0 0;
+  height: var(--h, 50%);
+}
+
+.crm-bar--accent {
+  background-color: var(--color-traevo-yellow);
 }
 
 .hero-title {
@@ -784,6 +1034,26 @@
   text-align: center;
 }
 
+/* Category icon inside each theme card */
+.theme-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 8%, transparent);
+  color: color-mix(in srgb, var(--color-traevo-yellow) 55%, transparent);
+  margin-bottom: 0.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.theme-card:hover .theme-icon {
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 16%, transparent);
+  color: var(--color-traevo-yellow);
+}
+
 /* ─────────────────────────────────────────
    AUTORIDADE
 ───────────────────────────────────────── */
@@ -888,6 +1158,36 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+  border-color: color-mix(in srgb, var(--color-traevo-yellow) 30%, transparent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-traevo-yellow) 6%, transparent);
+}
+
+/* Decorative large quote mark */
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.75rem;
+  right: 1rem;
+  font-size: 7rem;
+  font-weight: 900;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1;
+  color: color-mix(in srgb, var(--color-traevo-yellow) 12%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure card content sits above the quote decoration */
+.testimonial-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .stars {

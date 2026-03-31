@@ -64,7 +64,7 @@ async function submitForm(form) {
     if (feedback) {
       feedback.hidden = false
       feedback.classList.add('is-success')
-      feedback.textContent = '🎉 Inscrição confirmada! Você receberá o link por e-mail.'
+      feedback.textContent = 'Inscrição confirmada! Você receberá o link por e-mail.'
     }
     form.reset()
     inputs.forEach((i) => i.classList.remove('is-error'))
