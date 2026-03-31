@@ -1531,6 +1531,36 @@
   color: var(--color-traevo-gray);
 }
 
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--color-traevo-white) 6%, transparent);
+  border: 1px solid var(--color-traevo-dark-3);
+  color: var(--color-traevo-gray-2);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: color-mix(in srgb, var(--color-traevo-yellow) 15%, transparent);
+  border-color: color-mix(in srgb, var(--color-traevo-yellow) 40%, transparent);
+  color: var(--color-traevo-yellow);
+  transform: translateY(-2px);
+}
+
+.social-link--placeholder {
+  opacity: 0.4;
+}
+
 
 /* ─────────────────────────────────────────
    BACK TO TOP
