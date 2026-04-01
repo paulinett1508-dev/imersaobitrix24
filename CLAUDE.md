@@ -195,3 +195,13 @@ Definidos em `src/main.css` via `@theme`:
 | `--color-traevo-gray` | `#6b7a96` | Texto secundário |
 | `--color-traevo-gray-2` | `#9aaac4` | Texto terciário |
 | `--color-traevo-white` | `#ffffff` | Texto principal |
+
+---
+
+## Git Workflow
+
+- **Commit cedo e frequentemente** — após cada mudança significativa (feature, fix, refactor, estilo).
+- **Push automático** — um hook PostToolUse em `.claude/settings.json` executa `git push` após cada commit.
+- **Mensagens descritivas** — formato convencional: `tipo(escopo): descrição` (ex: `feat(form): add phone validation`).
+- **Nunca force push** — proibido `git push --force` ou `git push -f`.
+- **Trabalhe em feature branches** — nunca commitar direto na `main`. Usar branch e abrir PR.
