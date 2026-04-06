@@ -205,3 +205,23 @@ Definidos em `src/main.css` via `@theme`:
 - **Mensagens descritivas** — formato convencional: `tipo(escopo): descrição` (ex: `feat(form): add phone validation`).
 - **Nunca force push** — proibido `git push --force` ou `git push -f`.
 - **Trabalhe em feature branches** — nunca commitar direto na `main`. Usar branch e abrir PR.
+
+## Uso de Subagents
+
+- Use subagents para exploração de CSS/HTML, análise de SEO e validação de acessibilidade em paralelo
+- Offload inspeção de tokens Tailwind, levantamento de seções e análise de performance para subagents
+- Para ajustes em múltiplas seções da landing: um subagent por seção para execução paralela
+- Referenciar: `.agnostic-core/skills/ai/ai-problems-detection.md` antes de criar novas abstrações CSS
+
+## Verificação antes de Concluir
+
+- Nunca marque tarefa como concluída sem confirmar que o deploy Vercel subiu corretamente
+- Checagem obrigatória: HTML válido, nenhuma cor hardcoded, responsividade mobile testada (390px)
+- Pergunta padrão: *"Um designer sênior aprovaria esse layout?"*
+- Consultar `.agnostic-core/skills/audit/validation-checklist.md` antes de fechar qualquer feature visual
+
+## Elegância (features não-triviais)
+
+- Para mudanças que tocam 3+ seções da landing: pause e avalie se há padrão CSS reutilizável
+- Se um bloco Tailwind está ficando verboso: extrair para token CSS ou classe utilitária
+- **Exceção:** ajustes de texto, cor ou espaçamento pontuais — não criar abstração para 1 uso
