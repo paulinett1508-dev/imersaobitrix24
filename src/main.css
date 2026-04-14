@@ -196,6 +196,15 @@ button {
   color: var(--color-traevo-yellow);
 }
 
+.section-label--highlight {
+  display: inline-block;
+  background: color-mix(in srgb, var(--color-traevo-yellow) 15%, transparent);
+  color: var(--color-traevo-yellow);
+  border: 1px solid color-mix(in srgb, var(--color-traevo-yellow) 35%, transparent);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+}
+
 .section-title {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 800;
