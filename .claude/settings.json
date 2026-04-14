@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c 'INPUT=$(cat); if echo \"$INPUT\" | jq -r \".tool_input.command\" | grep -q \"git commit\"; then git push 2>/dev/null || true; fi'",
+            "command": "bash -c 'INPUT=$(cat); if echo \"$INPUT\" | jq -r \".tool_input.command\" | grep -q \"git commit\"; then cd /c/PROJETOS/imersaobitrix24 && git push 2>/dev/null || true; fi'",
             "timeout": 30
           }
         ]
