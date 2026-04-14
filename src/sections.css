@@ -1002,11 +1002,24 @@
 .b24-tagline {
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
   font-size: 0.8125rem;
   color: var(--color-traevo-gray);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
+}
+
+/* Desktop: separadores entre spans */
+.b24-tagline span + span::before {
+  content: '·';
+  color: var(--color-traevo-yellow);
+  margin-right: 0.5rem;
+  opacity: 0.7;
 }
 
 /* Stats compactos em linha */
@@ -1048,6 +1061,67 @@
   height: 2.5rem;
   background: var(--color-traevo-dark-3);
   flex-shrink: 0;
+}
+
+/* ── Mobile: redesign da seção Bitrix24 ── */
+@media (max-width: 767px) {
+  .b24-showcase {
+    padding: 1.75rem 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  /* Clip do espaço vazio do PNG quadrado:
+     Container com altura fixa + overflow:hidden mostra só
+     o centro da imagem (onde está o logotipo de fato) */
+  .b24-logo-wrap {
+    height: 68px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .b24-logo-img {
+    width: clamp(180px, 65vw, 260px);
+    height: auto;
+    /* remove animação de float no mobile p/ não causar jitter com clip */
+    animation: none;
+  }
+
+  /* Tagline proeminente: uma frase por linha */
+  .b24-tagline {
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-traevo-white);
+  }
+
+  /* Remove separadores inline no mobile */
+  .b24-tagline span + span::before {
+    content: none;
+  }
+
+  /* Cada span em linha própria */
+  .b24-tagline span {
+    display: block;
+  }
+
+  /* Primeira frase em amarelo como âncora visual */
+  .b24-tagline span:first-child {
+    color: var(--color-traevo-yellow);
+    font-size: 1.0625rem;
+  }
+
+  /* Stats: padding menor */
+  .b24-stat {
+    padding: 0.625rem 1rem;
+  }
+
+  .b24-halo {
+    filter: blur(20px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
