@@ -1268,6 +1268,22 @@
   color: var(--color-traevo-gray-2);
 }
 
+.authority-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-traevo-gray-2);
+  font-style: italic;
+  margin-top: -0.25rem;
+}
+
+.authority-quote {
+  border-left: 3px solid var(--color-traevo-yellow);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--color-traevo-gray-2);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
 /* ─────────────────────────────────────────
    DEPOIMENTOS
 ───────────────────────────────────────── */
