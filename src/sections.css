@@ -967,56 +967,35 @@
   padding: 2.5rem 1.5rem 2rem;
 }
 
-/* Halo difuso — glow azul-Bitrix ao fundo */
+/* Halo difuso — glow nas cores reais do Bitrix24 */
 .b24-halo {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse 70% 60% at 50% 42%,
-    color-mix(in srgb, #2B6EFF 20%, transparent) 0%,
-    transparent 65%
+    ellipse 75% 55% at 50% 42%,
+    color-mix(in srgb, #4EC3F7 18%, transparent) 0%,
+    color-mix(in srgb, #1565C0 10%, transparent) 50%,
+    transparent 70%
   );
-  filter: blur(28px);
+  filter: blur(32px);
   pointer-events: none;
   animation: b24-pulse 4s ease-in-out infinite;
 }
 
-/* Wrapper logo: ícone + wordmark em linha */
+/* Wrapper logo */
 .b24-logo-wrap {
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   animation: b24-float 5s ease-in-out infinite;
 }
 
-/* Ícone quadrado B */
-.b24-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 13px;
-  flex-shrink: 0;
-  filter: drop-shadow(0 4px 18px color-mix(in srgb, #2B6EFF 55%, transparent));
-}
-
-/* Wordmark */
-.b24-wordmark {
-  font-size: 2.25rem;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.b24-word {
-  color: var(--color-traevo-white);
-}
-
-.b24-num {
-  background: linear-gradient(135deg, #2B6EFF 0%, #00AAFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Imagem PNG oficial */
+.b24-logo-img {
+  width: clamp(180px, 40vw, 260px);
+  height: auto;
+  filter:
+    drop-shadow(0 2px 24px color-mix(in srgb, #4EC3F7 45%, transparent))
+    drop-shadow(0 0 6px color-mix(in srgb, #1565C0 25%, transparent));
 }
 
 /* Tagline */
