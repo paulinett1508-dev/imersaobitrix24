@@ -78,6 +78,17 @@ button {
   font: inherit;
 }
 
+/* Focus visível — WCAG AA (teclado e tecnologias assistivas) */
+:focus-visible {
+  outline: 2px solid var(--color-traevo-yellow);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* ─────────────────────────────────────────
    UTILITÁRIOS GLOBAIS
 ───────────────────────────────────────── */

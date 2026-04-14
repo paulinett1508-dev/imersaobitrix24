@@ -1749,8 +1749,8 @@
   border: 1px solid var(--color-traevo-dark-3);
   border-radius: 0.375rem;
   color: var(--color-traevo-gray);
-  width: 36px;
-  height: 36px;
+  min-width: 44px;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;

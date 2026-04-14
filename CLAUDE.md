@@ -42,7 +42,7 @@ Visual Baseline:     .agnostic-core/skills/design/visual-baseline.md
 ### Audit & Qualidade (consultar antes de fechar qualquer feature ou deploy)
 ```
 Validação geral:     .agnostic-core/skills/audit/validation-checklist.md
-Performance:         .agnostic-core/skills/audit/performance-audit.md
+Code review:         .agnostic-core/skills/audit/code-review.md
 Pós-implementação:   .agnostic-core/skills/audit/post-implementation-conformity.md
 Revisão de copy PT:  .agnostic-core/skills/audit/revisao-texto-ptbr.md
 Detect hardcodes:    .agnostic-core/skills/audit/detect-hardcodes.md
@@ -126,7 +126,7 @@ Obrigatório para o formulário de inscrição funcionar em produção.
 - [ ] `src/assets/images/depoimentos/` — fotos reais dos depoimentos
 - [ ] `src/assets/images/og/og-image.jpg` — imagem Open Graph 1200×630px
 - [ ] Seção Autoridade: bio real + estatísticas reais (empresas, anos, profissionais)
-- [ ] Seção Depoimentos: nomes, cargos, empresas e fotos reais
+- [ ] Seção Depoimentos: nomes, cargos, empresas e fotos reais **(CRÍTICO: placeholders "[Nome do Depoimento 1]" destroem credibilidade — bloqueia produção)**
 - [ ] Rodapé — redes sociais: URLs do WhatsApp, Facebook e LinkedIn da Traevo
   - Instagram já configurado: `https://www.instagram.com/traevo.br`
   - WhatsApp, Facebook, LinkedIn: `href="#"` com tooltip "Aguardando informação"
