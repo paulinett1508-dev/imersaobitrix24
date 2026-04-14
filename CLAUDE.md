@@ -23,14 +23,36 @@
 
 ## Skills a consultar antes de implementar
 
+### Frontend & UX (consultar antes de qualquer mudança visual)
 ```
-HTML e CSS:       .agnostic-core/skills/frontend/html-css-audit.md
-CSS Governance:   .agnostic-core/skills/frontend/css-governance.md
-Acessibilidade:   .agnostic-core/skills/frontend/accessibility.md
-UX Guidelines:    .agnostic-core/skills/frontend/ux-guidelines.md
-SEO:              .agnostic-core/skills/frontend/seo-checklist.md
-Tailwind:         .agnostic-core/skills/frontend/tailwind-patterns.md
-UX/UI Princípios: .agnostic-core/skills/ux-ui/principios-de-interface.md
+HTML e CSS:          .agnostic-core/skills/frontend/html-css-audit.md
+CSS Governance:      .agnostic-core/skills/frontend/css-governance.md
+Acessibilidade:      .agnostic-core/skills/frontend/accessibility.md
+UX Guidelines:       .agnostic-core/skills/frontend/ux-guidelines.md
+SEO:                 .agnostic-core/skills/frontend/seo-checklist.md
+Tailwind:            .agnostic-core/skills/frontend/tailwind-patterns.md
+UX/UI Princípios:    .agnostic-core/skills/ux-ui/principios-de-interface.md
+Menos é Mais:        .agnostic-core/skills/frontend/menos-e-mais.md
+Responsividade:      .agnostic-core/skills/frontend/responsive-breakpoint-table.md
+Quality Gates UX:    .agnostic-core/skills/ux-ui/ui-ux-quality-gates.md
+Navegação:           .agnostic-core/skills/ux-ui/navegacao-sem-redundancia.md
+Visual Baseline:     .agnostic-core/skills/design/visual-baseline.md
+```
+
+### Audit & Qualidade (consultar antes de fechar qualquer feature ou deploy)
+```
+Validação geral:     .agnostic-core/skills/audit/validation-checklist.md
+Performance:         .agnostic-core/skills/audit/performance-audit.md
+Pós-implementação:   .agnostic-core/skills/audit/post-implementation-conformity.md
+Revisão de copy PT:  .agnostic-core/skills/audit/revisao-texto-ptbr.md
+Detect hardcodes:    .agnostic-core/skills/audit/detect-hardcodes.md
+Senior verification: .agnostic-core/skills/audit/senior-verification-protocol.md
+```
+
+### AI & Desenvolvimento
+```
+AI anti-patterns:    .agnostic-core/skills/ai/ai-problems-detection.md
+Model routing:       .agnostic-core/skills/ai/model-routing.md
 ```
 
 ---
@@ -211,14 +233,17 @@ Definidos em `src/main.css` via `@theme`:
 - Use subagents para exploração de CSS/HTML, análise de SEO e validação de acessibilidade em paralelo
 - Offload inspeção de tokens Tailwind, levantamento de seções e análise de performance para subagents
 - Para ajustes em múltiplas seções da landing: um subagent por seção para execução paralela
-- Referenciar: `.agnostic-core/skills/ai/ai-problems-detection.md` antes de criar novas abstrações CSS
+- Referenciar `ai-problems-detection.md` antes de criar novas abstrações CSS
+- Referenciar `model-routing.md` para escolher o modelo certo por tipo de tarefa (ex: Haiku para styling pontual, Sonnet/Opus para arquitetura)
 
 ## Verificação antes de Concluir
 
 - Nunca marque tarefa como concluída sem confirmar que o deploy Vercel subiu corretamente
 - Checagem obrigatória: HTML válido, nenhuma cor hardcoded, responsividade mobile testada (390px)
 - Pergunta padrão: *"Um designer sênior aprovaria esse layout?"*
-- Consultar `.agnostic-core/skills/audit/validation-checklist.md` antes de fechar qualquer feature visual
+- Antes de fechar feature visual: `validation-checklist.md` + `ui-ux-quality-gates.md` + `senior-verification-protocol.md`
+- Antes de deploy em produção: `performance-audit.md` + `post-implementation-conformity.md` + `detect-hardcodes.md`
+- Após qualquer alteração de copy em PT-BR: `revisao-texto-ptbr.md`
 
 ## Elegância (features não-triviais)
 
