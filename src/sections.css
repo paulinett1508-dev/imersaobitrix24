@@ -946,136 +946,134 @@
   align-items: flex-start;
 }
 
-/* ── Stats panel: card unificado elegante ── */
-.solution-badge-stack {
-  display: flex;
-  flex-direction: row;          /* horizontal no mobile */
-  width: 100%;
+/* ── Bitrix24 showcase visual ── */
+@keyframes b24-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes b24-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.6;  transform: scale(1.08); }
+}
+
+.b24-showcase {
   position: relative;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--color-traevo-yellow) 10%, var(--color-traevo-dark-2)) 0%,
-    var(--color-traevo-dark-2) 55%
-  );
-  border: 1px solid color-mix(in srgb, var(--color-traevo-yellow) 30%, transparent);
-  border-radius: 1.25rem;
-  overflow: hidden;
-}
-
-/* Glow decorativo no canto superior-direito */
-.solution-badge-stack::after {
-  content: '';
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--color-traevo-yellow) 22%, transparent) 0%,
-    transparent 65%
-  );
-  pointer-events: none;
-}
-
-.big-badge {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1.25rem 0.75rem;
-  border: none;
-  border-right: 1px solid color-mix(in srgb, var(--color-traevo-yellow) 18%, var(--color-traevo-dark-3));
-  border-radius: 0;
-  background: none;
-  min-width: 0;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 2.5rem 1.5rem 2rem;
+}
+
+/* Halo difuso — glow azul-Bitrix ao fundo */
+.b24-halo {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 42%,
+    color-mix(in srgb, #2B6EFF 20%, transparent) 0%,
+    transparent 65%
+  );
+  filter: blur(28px);
+  pointer-events: none;
+  animation: b24-pulse 4s ease-in-out infinite;
+}
+
+/* Wrapper logo: ícone + wordmark em linha */
+.b24-logo-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: b24-float 5s ease-in-out infinite;
+}
+
+/* Ícone quadrado B */
+.b24-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 18px color-mix(in srgb, #2B6EFF 55%, transparent));
+}
+
+/* Wordmark */
+.b24-wordmark {
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.b24-word {
+  color: var(--color-traevo-white);
+}
+
+.b24-num {
+  background: linear-gradient(135deg, #2B6EFF 0%, #00AAFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tagline */
+.b24-tagline {
+  position: relative;
+  z-index: 1;
+  font-size: 0.8125rem;
+  color: var(--color-traevo-gray);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-align: center;
-  gap: 0.25rem;
 }
 
-.big-badge:last-child {
-  border-right: none;
+/* Stats compactos em linha */
+.b24-stats {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--color-traevo-dark-3);
+  border-radius: 2rem;
+  overflow: hidden;
+  background: var(--color-traevo-dark-2);
 }
 
-.big-badge--outline {
-  background: color-mix(in srgb, var(--color-traevo-yellow) 5%, transparent);
+.b24-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  gap: 0.1rem;
 }
 
-.big-badge-number {
-  font-size: clamp(1.625rem, 5vw, 2.25rem);
+.b24-stat strong {
+  font-size: 1.25rem;
   font-weight: 900;
   color: var(--color-traevo-yellow);
   line-height: 1;
 }
 
-.big-badge-text {
-  font-size: 0.7rem;
+.b24-stat span {
+  font-size: 0.6875rem;
   color: var(--color-traevo-gray-2);
-  line-height: 1.3;
+  white-space: nowrap;
 }
 
-/* Ícone SVG dentro do badge */
-.badge-svg {
-  color: var(--color-traevo-yellow);
+.b24-stat-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--color-traevo-dark-3);
   flex-shrink: 0;
-  opacity: 0.85;
-  display: block;
-  width: 22px;
-  height: 22px;
 }
 
-/* Wrapper de número + texto */
-.badge-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.125rem;
-}
-
-/* Desktop: panel vertical elegante na coluna direita */
-@media (min-width: 1024px) {
-  .solution-visual {
-    align-items: center;
-  }
-
-  .solution-badge-stack {
-    flex-direction: column;
-    max-width: 300px;
-  }
-
-  .big-badge {
-    flex-direction: row;
-    gap: 1.25rem;
-    align-items: center;
-    border-right: none;
-    border-bottom: 1px solid color-mix(in srgb, var(--color-traevo-yellow) 15%, var(--color-traevo-dark-3));
-    padding: 1.75rem 2rem;
-    text-align: left;
-  }
-
-  .big-badge:last-child {
-    border-bottom: none;
-  }
-
-  .badge-svg {
-    width: 28px;
-    height: 28px;
-  }
-
-  .badge-info {
-    align-items: flex-start;
-  }
-
-  .big-badge-number {
-    font-size: 2.5rem;
-    white-space: nowrap;
-  }
-
-  .big-badge-text {
-    font-size: 0.875rem;
-    line-height: 1.4;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .b24-logo-wrap { animation: none; }
+  .b24-halo      { animation: none; opacity: 0.4; }
 }
 
 /* ─────────────────────────────────────────

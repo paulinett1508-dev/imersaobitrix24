@@ -205,6 +205,20 @@ button {
   border-radius: 2rem;
 }
 
+/* Label de destaque máximo — usado na seção Solução */
+.solution-label-hero {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-traevo-black);
+  background: var(--color-traevo-yellow);
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-traevo-yellow) 40%, transparent);
+}
+
 .section-title {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 800;
